@@ -1,0 +1,279 @@
+.section {
+  margin-bottom: 80px;
+  // .section__title
+
+  &__title {
+    font-family: "Nekst";
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 90%;
+    color: #111111;
+    margin-bottom: 44px;
+    max-width: 753px;
+
+    @include media-breakpoint-up("s") {
+      font-size: 54px;
+    }
+  }
+}
+.calculator-block {
+}
+.calculator {
+  &__box {
+    @include media-breakpoint-up("l") {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 32px;
+    }
+  }
+  // .calculator__item
+
+  &__item {
+    @include media-breakpoint-up("l") {
+    }
+    margin-bottom: 32px;
+  }
+
+  // .calculator__subtitle
+
+  &__subtitle {
+    font-family: $gilroy;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 24px;
+  }
+
+  // .calculator__results
+
+  &__results {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    margin-bottom: 32px;
+
+    @include media-breakpoint-up("s") {
+      flex-direction: row;
+    }
+  }
+}
+.price {
+  // .price__input
+
+  &__input {
+  }
+
+  &__box {
+    position: relative;
+    &::before {
+      content: "₽";
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      font-family: "Nekst";
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 20px;
+      color: #333e48;
+
+      @include media-breakpoint-up("s") {
+        font-size: 30px;
+        line-height: 36px;
+        color: #575757;
+      }
+    }
+  }
+}
+
+.inputs-box {
+  display: grid;
+}
+.input {
+  font-family: "Nekst";
+  background: #f3f3f4;
+  border-radius: 16px;
+  border: none;
+  padding: 16px 24px;
+  font-family: "Nekst";
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+  color: #333e48;
+  width: 100%;
+
+  @include media-breakpoint-up("s") {
+    font-size: 30px;
+    line-height: 36px;
+    color: #575757;
+  }
+}
+.range {
+}
+.payment {
+  // .payment__input
+
+  &__input {
+    &-percent {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      padding: 9px;
+      font-family: "Nekst";
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 20px;
+      color: #333e48;
+      background: #e0e0e06a;
+      border-radius: 16px;
+      border: none;
+
+      @include media-breakpoint-up("s") {
+        top: 7px;
+        right: 7px;
+        padding: 15px 17px;
+        font-size: 20px;
+        line-height: 120%;
+        color: #575757;
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+
+    &::before {
+      content: "%";
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      font-family: "Nekst";
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 20px;
+      color: #333e48;
+
+      @include media-breakpoint-up("s") {
+        padding: 4px 8px;
+        font-size: 20px;
+        line-height: 120%;
+        color: #575757;
+      }
+    }
+  }
+}
+.period {
+  // .period__input
+
+  &__input {
+  }
+
+  &__box {
+    position: relative;
+    &::before {
+      content: "мес.";
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      font-family: "Nekst";
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 20px;
+      color: #333e48;
+
+      @include media-breakpoint-up("s") {
+        font-size: 30px;
+        line-height: 36px;
+        color: #575757;
+      }
+    }
+  }
+}
+.result {
+  flex-basis: 50%;
+  // .result__title
+
+  &__title {
+    font-family: $gilroy;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #333333;
+    margin-bottom: 8px;
+  }
+
+  // .result__sum
+
+  &__sum {
+    font-family: "Nekst";
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 20px;
+    color: #333333;
+
+    @include media-breakpoint-up("s") {
+      font-size: 54px;
+      line-height: 90%;
+    }
+  }
+}
+.submit-application {
+}
+.orange-btn {
+  background: $orange;
+  color: $white;
+  border: 1px solid $orange;
+  border-radius: 40px;
+  padding: 12px 24px;
+}
+input[type="range"] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 95%; /* Specific width is required for Firefox. */
+  height: 2px;
+  background: $orange; /* Otherwise white in Chrome */
+  margin: auto;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type="range"]::-ms-track {
+  width: 95%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: $orange;
+  cursor: pointer;
+}
+
+/* All the same stuff for Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: $orange;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type="range"]::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: $orange;
+  cursor: pointer;
+}

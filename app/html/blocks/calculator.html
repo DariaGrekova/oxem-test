@@ -1,0 +1,42 @@
+<section class="section calculator-block">
+  <form class="calculator">
+    <h2 class="section__title">Рассчитайте стоимость автомобиля в лизинг</h2>
+    <div class="calculator__box">
+      <div class="calculator__item price">
+        <h3 class="calculator__subtitle">Стоимость автомобиля</h3>
+        <div class="inputs-box price__box">
+          <input type="number" class="number input price__input" min="0" max="6000000" value="3300000"/>
+          <input type="range" class="range" min="0" max="6000000" value="3300000"/>
+        </div>
+      </div>
+      <div class="calculator__item payment">
+        <h3 class="calculator__subtitle">Первоначальный взнос</h3>
+        <div class="inputs-box  payment__box">
+          <input type="number" class="summ input payment__input" value="0"/>
+          <input type="number" class="number payment__input-percent" min="10" max="60" value="50"/>
+          <input type="range" class="range" min="10" max="60" value="50"/>
+        </div>
+      </div>
+      <div class="calculator__item period">
+        <h3 class="calculator__subtitle">Срок лизинга</h3>
+        <div class="inputs-box  period__box">
+          <input type="number" class="number input period__input" min="0" max="72" value="60"/>
+          <input type="range" class="range" min="0" max="72" value="60"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="calculator__results">
+      <div class="result">
+        <p class="result__title">Сумма договора лизинга</p>
+        <p class="result__sum summary">4 467 313</p>
+      </div>
+      <div class="result">
+        <p class="result__title">Ежемесячный платеж от</p>
+        <p class="result__sum month-summary">114 455</p>
+      </div>
+    </div>
+
+    <button class="submit-application orange-btn">Оставить заявку</button>
+  </form>
+</section>

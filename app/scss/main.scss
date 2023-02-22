@@ -1,0 +1,9 @@
+@import "variables"; //пишем переменные
+@import "mixins"; //сборс стилей
+@import "reset"; //сборс стилей
+@import "fonts"; //подключаем шрифты (локально)
+
+//подключаем БЭМ блоки
+@import "blocks/header";
+
+@import "blocks/catculator";

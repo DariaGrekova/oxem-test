@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- подключаем шапку -->
+    @@include('blocks/header.html')
+    <main class="main">
+      <div class="container">
+        @@include('blocks/calculator.html')
+      </div>
+    </main>
+
+    <!-- подключаем подвал -->
+    @@include('blocks/footer.html')
+
+
+    <!-- подключаем js -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
